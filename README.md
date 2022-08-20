@@ -1,4 +1,4 @@
-## This repo is based on codes written in python in ROS.
+## This repo is based on codes written in python for ROS.
 
 Go to goal (For x = 2 and y = 2) - 
 
