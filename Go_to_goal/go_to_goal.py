@@ -5,7 +5,7 @@ from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 import math
 
-def posecallback1(msg1):
+def posecallback(msg1):
     global pose
     pose = msg1
     x = round(pose.x,4)
@@ -13,7 +13,7 @@ def posecallback1(msg1):
 
 rospy.init_node("gotogoal", anonymous=True)
 pub = rospy.Publisher("/turtle1/cmd_vel",Twist,queue_size=10)
-pose_sub = rospy.Subscriber("/turtle1/pose",Pose,posecallback1)
+pose_sub = rospy.Subscriber("/turtle1/pose",Pose,posecallback)
 rate = rospy.Rate(30)
 pose = Pose()
 
