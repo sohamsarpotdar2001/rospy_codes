@@ -35,9 +35,6 @@ pose2.x = 8
 pose2.y = 2
 
 vel = Twist()
-vel.linear.x = 0
-vel.angular.z = 0
-pub2.publish(vel)
 distance = math.sqrt((pose1.x - pose2.x) ** 2 + (pose1.y - pose2.y) ** 2)
 angle = math.atan2(pose1.y - pose2.y, pose1.x - pose2.x)
 print(distance,angle,pose1,pub2)
