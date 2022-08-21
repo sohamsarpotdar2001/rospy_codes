@@ -43,7 +43,7 @@ ang_vel = 6 * (angle - pose2.theta)
 vel.linear.x = lin_vel
 vel.angular.z = ang_vel
 pub2.publish(vel)
-while rospy.is_shutdown:
+while not rospy.is_shutdown():
     while distance > 0.1:
         distance = math.sqrt((pose1.x - pose2.x) ** 2 + (pose1.y - pose2.y) ** 2)
         angle = math.atan2(pose1.y - pose2.y, pose1.x - pose2.x)
